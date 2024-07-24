@@ -1,0 +1,32 @@
+{
+    "name": "Domain Extractor",
+    "version": "1.0.0",
+    "description": "Extracts the domain from the active tab.",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "storage"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["bank_domains.csv"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+   
+  }
+  

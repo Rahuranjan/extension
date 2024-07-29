@@ -17,7 +17,7 @@ function showMessage(text, isError) {
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
-    z-index: 2147483647;
+    z-index: 2147483647; 
     transition: opacity 0.5s;
   `;
 

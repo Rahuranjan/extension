@@ -14,7 +14,7 @@ function loadCSV() {
 
 // Call the function to load CSV on startup
 loadCSV();
-
+ 
 let pendingMessages = {};
 let injectedTabs = new Set();
 let readyTabs = new Set();
@@ -28,6 +28,7 @@ function updateDomain(tabId) {
     }
 
     if (current_tab_info.url) {
+      console.log("current tab", current_tab_info.url)
       try {
         let url = new URL(current_tab_info.url);
         let domain = url.hostname;
